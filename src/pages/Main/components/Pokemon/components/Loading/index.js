@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import { Main } from './styles'
+import { Main } from './styles';
 
-const Loading = () => (
-  <Main />
-)
+const Loading = () => <Main />;
 
-export default Loading
+export default Loading;

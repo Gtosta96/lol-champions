@@ -1,59 +1,52 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
-import { Title, Container, Evolution } from './styles'
+import { Title, Container, Evolution } from './styles';
 
-import { api } from '../../../../../../services/api'
+import { api } from '../../../../../../services/api';
 
 const Evolutions = ({ prev, next }) => {
-  const [evolutions, setEvolutions] = useState([])
+  const [evolutions, setEvolutions] = useState([]);
 
   const fetchPokemon = async (number) => {
-    const response = await api.get(`pokemon/${number}`)
+    const response = await api.get(`pokemon/${number}`);
 
-    return response.data
-  }
+    return response.data;
+  };
 
   useEffect(() => {
     if (prev && next) {
-      const prevs = prev.map(async p => {
-        const pokemon = await fetchPokemon(p.number)
+      const prevs = prev.map(async (p) => {
+        const pokemon = await fetchPokemon(p.number);
 
-        return pokemon
-      })
+        return pokemon;
+      });
 
-      const nexts = next.map(async n => {
-        const pokemon = await fetchPokemon(n.number)
+      const nexts = next.map(async (n) => {
+        const pokemon = await fetchPokemon(n.number);
 
-        return pokemon
-      })
+        return pokemon;
+      });
 
-      const all = [...prevs, ...nexts]
-      Promise.all(all)
-        .then(values => setEvolutions(values))
+      const all = [...prevs, ...nexts];
+      Promise.all(all).then((values) => setEvolutions(values));
     }
-  }, [prev, next])
+  }, [prev, next]);
 
   return (
-
     evolutions.length > 0 && (
       <>
         <Title>Evolutions</Title>
         <Container>
-          {
-            evolutions && (
-              evolutions.map(evolution => (
-                <Evolution key={evolution.number}>
-                  <img src={evolution.image} alt={evolution.name} />
-                </Evolution>
-              ))
-            )
-          }
+          {evolutions &&
+            evolutions.map((evolution) => (
+              <Evolution key={evolution.number}>
+                <img src={evolution.image} alt={evolution.name} />
+              </Evolution>
+            ))}
         </Container>
       </>
     )
+  );
+};
 
-
-  )
-}
-
-export default Evolutions
+export default Evolutions;

@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Container = styled.div`
   margin-top: 5px;
@@ -7,6 +7,6 @@ const Container = styled.div`
     height: 100% !important;
     width: 100% !important;
   }
-`
+`;
 
-export { Container }
+export { Container };

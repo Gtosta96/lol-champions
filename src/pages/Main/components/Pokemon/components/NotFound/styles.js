@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Title = styled.div`
   display: flex;
@@ -6,7 +6,7 @@ const Title = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 50px;
-`
+`;
 
 const Main = styled.div`
   display: flex;
@@ -18,5 +18,5 @@ const Main = styled.div`
   img {
     margin: 50px 0;
   }
-`
-export { Title, Main }
+`;
+export { Title, Main };

@@ -1,8 +1,8 @@
-import styled from 'styled-components'
-import valor from '../../assets/Intersect.svg'
+import styled from 'styled-components';
+import valor from '../../assets/Intersect.svg';
 
 const Container = styled.div`
-  background: #15172B;
+  background: #15172b;
   border-radius: 15px;
   min-height: calc(100vh - 60px);
   height: 100%;
@@ -10,7 +10,7 @@ const Container = styled.div`
   padding: 40px;
   margin: 0 auto;
   z-index: 1;
-`
+`;
 
 const Dashboard = styled.div`
   width: 100%;
@@ -18,7 +18,7 @@ const Dashboard = styled.div`
   display: flex;
   align-items: stretch;
   justify-content: space-around;
-`
+`;
 
 const Presentation = styled.div`
   margin-right: 0px;
@@ -29,10 +29,10 @@ const Presentation = styled.div`
   div {
     padding: 20px 40px 20px 0;
   }
-`
+`;
 
 const ImageBack = styled.img.attrs((props) => ({
-  src: props.image
+  src: props.image,
 }))`
   position: absolute;
   width: 100px;
@@ -40,7 +40,7 @@ const ImageBack = styled.img.attrs((props) => ({
   left: 0px;
   filter: opacity(50%);
   z-index: 10;
-`
+`;
 
 const Header = styled.div`
   margin-top: 50px;
@@ -59,13 +59,13 @@ const Header = styled.div`
       color: #565790;
     }
   }
-`
+`;
 
 const Board = styled.div`
-  background: #F0F0FF url(${valor}) no-repeat 100% bottom;
+  background: #f0f0ff url(${valor}) no-repeat 100% bottom;
   flex: 2;
   border-radius: 15px;
-`
+`;
 
 const Error = styled.div`
   max-width: 70%;
@@ -74,6 +74,6 @@ const Error = styled.div`
   img {
     width: 100%;
   }
-`
+`;
 
-export { Container, Dashboard, Presentation, Header, Board, ImageBack, Error }
+export { Container, Dashboard, Presentation, Header, Board, ImageBack, Error };

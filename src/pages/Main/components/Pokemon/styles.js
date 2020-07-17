@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Header = styled.div`
   color: #15172B;
@@ -22,7 +22,7 @@ const Header = styled.div`
     top: 0;
     left: 15px;
   }
-`
+`;
 
 const Container = styled.div`
   margin-top: 50px;
@@ -30,7 +30,7 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-`
+`;
 
 const Information = styled.div`
   color: #151720;
@@ -41,10 +41,10 @@ const Information = styled.div`
   h1 {
     font-size: 18px;
   }
-`
+`;
 
 const Image = styled.img.attrs(({ image }) => ({
-  src: image
+  src: image,
 }))`
   max-width: 100%;
   max-height: 580px;
@@ -53,13 +53,13 @@ const Image = styled.img.attrs(({ image }) => ({
   &:hover {
     transform: scale(1.1);
   }
-`
+`;
 
 const Display = styled.div`
   height: 600px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-`
+`;
 
-export { Header, Container, Information, Image, Display }
+export { Header, Container, Information, Image, Display };

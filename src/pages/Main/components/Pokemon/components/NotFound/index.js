@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import { Title, Main } from './styles'
+import { Title, Main } from './styles';
 
-import notfound from '../../../../../../assets/not-found.png'
-import loading from '../../../../../../assets/loading.gif'
+import notfound from '../../../../../../assets/not-found.png';
+import loading from '../../../../../../assets/loading.gif';
 
 const NotFound = () => (
   <>
@@ -14,6 +14,6 @@ const NotFound = () => (
       <img src={loading} alt="Pokemon not found" />
     </Main>
   </>
-)
+);
 
-export default NotFound
+export default NotFound;
